@@ -1,0 +1,234 @@
+{
+  "sales": [
+    {
+      "id": "S001",
+      "date": "2024-12-01",
+      "store": "Downtown Store",
+      "product": "Winter Jacket",
+      "category": "Clothing",
+      "quantity": 5,
+      "unit_price": 89.99,
+      "total": 449.95,
+      "customer_id": "C1234"
+    },
+    {
+      "id": "S002",
+      "date": "2024-12-01",
+      "store": "Mall Store",
+      "product": "Running Shoes",
+      "category": "Footwear",
+      "quantity": 3,
+      "unit_price": 129.99,
+      "total": 389.97,
+      "customer_id": "C5678"
+    },
+    {
+      "id": "S003",
+      "date": "2024-12-02",
+      "store": "Downtown Store",
+      "product": "Laptop Bag",
+      "category": "Accessories",
+      "quantity": 2,
+      "unit_price": 49.99,
+      "total": 99.98,
+      "customer_id": "C9012"
+    },
+    {
+      "id": "S004",
+      "date": "2024-12-02",
+      "store": "Online",
+      "product": "Smart Watch",
+      "category": "Electronics",
+      "quantity": 1,
+      "unit_price": 299.99,
+      "total": 299.99,
+      "customer_id": "C3456"
+    },
+    {
+      "id": "S005",
+      "date": "2024-12-03",
+      "store": "Mall Store",
+      "product": "Winter Jacket",
+      "category": "Clothing",
+      "quantity": 2,
+      "unit_price": 89.99,
+      "total": 179.98,
+      "customer_id": "C7890"
+    },
+    {
+      "id": "S006",
+      "date": "2024-12-03",
+      "store": "Downtown Store",
+      "product": "Yoga Mat",
+      "category": "Sports",
+      "quantity": 4,
+      "unit_price": 29.99,
+      "total": 119.96,
+      "customer_id": "C2345"
+    },
+    {
+      "id": "S007",
+      "date": "2024-12-04",
+      "store": "Online",
+      "product": "Bluetooth Headphones",
+      "category": "Electronics",
+      "quantity": 2,
+      "unit_price": 79.99,
+      "total": 159.98,
+      "customer_id": "C6789"
+    },
+    {
+      "id": "S008",
+      "date": "2024-12-04",
+      "store": "Mall Store",
+      "product": "Running Shoes",
+      "category": "Footwear",
+      "quantity": 1,
+      "unit_price": 129.99,
+      "total": 129.99,
+      "customer_id": "C0123"
+    },
+    {
+      "id": "S009",
+      "date": "2024-12-05",
+      "store": "Downtown Store",
+      "product": "Coffee Maker",
+      "category": "Appliances",
+      "quantity": 1,
+      "unit_price": 89.99,
+      "total": 89.99,
+      "customer_id": "C4567"
+    },
+    {
+      "id": "S010",
+      "date": "2024-12-05",
+      "store": "Online",
+      "product": "Winter Jacket",
+      "category": "Clothing",
+      "quantity": 3,
+      "unit_price": 89.99,
+      "total": 269.97,
+      "customer_id": "C8901"
+    }
+  ],
+  "inventory": [
+    {
+      "product": "Winter Jacket",
+      "category": "Clothing",
+      "current_stock": 45,
+      "reorder_point": 20,
+      "supplier": "Fashion Plus",
+      "cost": 45.00
+    },
+    {
+      "product": "Running Shoes",
+      "category": "Footwear",
+      "current_stock": 32,
+      "reorder_point": 15,
+      "supplier": "SportGear Inc",
+      "cost": 65.00
+    },
+    {
+      "product": "Laptop Bag",
+      "category": "Accessories",
+      "current_stock": 28,
+      "reorder_point": 10,
+      "supplier": "TechAccessories",
+      "cost": 25.00
+    },
+    {
+      "product": "Smart Watch",
+      "category": "Electronics",
+      "current_stock": 12,
+      "reorder_point": 5,
+      "supplier": "ElectroWorld",
+      "cost": 150.00
+    },
+    {
+      "product": "Yoga Mat",
+      "category": "Sports",
+      "current_stock": 56,
+      "reorder_point": 20,
+      "supplier": "FitSupplies",
+      "cost": 15.00
+    },
+    {
+      "product": "Bluetooth Headphones",
+      "category": "Electronics",
+      "current_stock": 23,
+      "reorder_point": 10,
+      "supplier": "AudioTech",
+      "cost": 40.00
+    },
+    {
+      "product": "Coffee Maker",
+      "category": "Appliances",
+      "current_stock": 8,
+      "reorder_point": 5,
+      "supplier": "HomeGoods Co",
+      "cost": 45.00
+    }
+  ],
+  "customers": [
+    {
+      "id": "C1234",
+      "name": "John Smith",
+      "email": "john.smith@email.com",
+      "loyalty_tier": "Gold",
+      "total_purchases": 2340.50,
+      "join_date": "2023-01-15"
+    },
+    {
+      "id": "C5678",
+      "name": "Sarah Johnson",
+      "email": "sarah.j@email.com",
+      "loyalty_tier": "Silver",
+      "total_purchases": 1560.25,
+      "join_date": "2023-05-20"
+    },
+    {
+      "id": "C9012",
+      "name": "Mike Chen",
+      "email": "mchen@email.com",
+      "loyalty_tier": "Bronze",
+      "total_purchases": 890.75,
+      "join_date": "2024-02-10"
+    },
+    {
+      "id": "C3456",
+      "name": "Emma Williams",
+      "email": "emma.w@email.com",
+      "loyalty_tier": "Gold",
+      "total_purchases": 3200.00,
+      "join_date": "2022-11-30"
+    },
+    {
+      "id": "C7890",
+      "name": "David Brown",
+      "email": "dbrown@email.com",
+      "loyalty_tier": "Silver",
+      "total_purchases": 1200.50,
+      "join_date": "2023-08-15"
+    }
+  ],
+  "stores": [
+    {
+      "name": "Downtown Store",
+      "location": "123 Main St",
+      "manager": "Alice Cooper",
+      "monthly_target": 50000
+    },
+    {
+      "name": "Mall Store",
+      "location": "456 Shopping Center",
+      "manager": "Bob Martinez",
+      "monthly_target": 45000
+    },
+    {
+      "name": "Online",
+      "location": "E-commerce",
+      "manager": "Carol Davis",
+      "monthly_target": 60000
+    }
+  ]
+}

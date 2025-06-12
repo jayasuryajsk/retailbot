@@ -23,6 +23,13 @@ import { createDocument } from '@/lib/ai/tools/create-document';
 import { updateDocument } from '@/lib/ai/tools/update-document';
 import { requestSuggestions } from '@/lib/ai/tools/request-suggestions';
 import { getWeather } from '@/lib/ai/tools/get-weather';
+import { 
+  getSalesData,
+  getInventoryStatus,
+  getCustomerAnalytics,
+  getStorePerformance,
+  getProductAnalytics
+} from '@/lib/ai/tools/retail-analytics';
 import { isProductionEnvironment } from '@/lib/constants';
 import { myProvider } from '@/lib/ai/providers';
 import { entitlementsByUserType } from '@/lib/ai/entitlements';
@@ -155,6 +162,11 @@ export async function POST(request: Request) {
             selectedChatModel === 'chat-model-reasoning'
               ? []
               : [
+                  'getSalesData',
+                  'getInventoryStatus',
+                  'getCustomerAnalytics',
+                  'getStorePerformance',
+                  'getProductAnalytics',
                   'getWeather',
                   'createDocument',
                   'updateDocument',
@@ -163,6 +175,11 @@ export async function POST(request: Request) {
           experimental_transform: smoothStream({ chunking: 'word' }),
           experimental_generateMessageId: generateUUID,
           tools: {
+            getSalesData,
+            getInventoryStatus,
+            getCustomerAnalytics,
+            getStorePerformance,
+            getProductAnalytics,
             getWeather,
             createDocument: createDocument({ session, dataStream }),
             updateDocument: updateDocument({ session, dataStream }),
@@ -237,6 +254,8 @@ export async function POST(request: Request) {
     if (error instanceof ChatSDKError) {
       return error.toResponse();
     }
+    console.error('Unexpected error in chat route:', error);
+    return new Response('Internal Server Error', { status: 500 });
   }
 }
 

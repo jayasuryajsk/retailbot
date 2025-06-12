@@ -16,9 +16,11 @@
     "db:pull": "drizzle-kit pull",
     "db:check": "drizzle-kit check",
     "db:up": "drizzle-kit up",
-    "test": "export PLAYWRIGHT=True && pnpm exec playwright test"
+    "test": "export PLAYWRIGHT=True && pnpm exec playwright test",
+    "fmt:mock": "prettier --write src/mocks/smartRetailDummy.json"
   },
   "dependencies": {
+    "@ai-sdk/google": "^1.2.19",
     "@ai-sdk/react": "^1.2.11",
     "@ai-sdk/xai": "^1.2.15",
     "@codemirror/lang-javascript": "^6.2.2",
