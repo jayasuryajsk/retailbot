@@ -50,7 +50,7 @@ function ProductAnalyticsCard({ data }: { data: ProductAnalyticsData }) {
     <Card className="w-full max-w-4xl">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <TrendingUp className="h-5 w-5" />
+          <TrendingUp className="size-5" />
           Product Performance Analytics
         </CardTitle>
       </CardHeader>
@@ -94,7 +94,7 @@ function ProductAnalyticsCard({ data }: { data: ProductAnalyticsData }) {
         {/* Top Products */}
         <div>
           <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-            <Package className="h-4 w-4" />
+            <Package className="size-4" />
             {data.metadata?.isLowestFirst ? 
               `Lowest Performing Products (by ${data.metadata.sortBy})` : 
               `Top Performing Products (by ${data.metadata?.sortBy || 'revenue'})`
@@ -107,7 +107,7 @@ function ProductAnalyticsCard({ data }: { data: ProductAnalyticsData }) {
                 className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">
+                  <div className="size-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">
                     {index + 1}
                   </div>
                   <div>
@@ -133,7 +133,7 @@ function ProductAnalyticsCard({ data }: { data: ProductAnalyticsData }) {
         {/* Category Performance */}
         <div>
           <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-            <DollarSign className="h-4 w-4" />
+            <DollarSign className="size-4" />
             Category Performance
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">

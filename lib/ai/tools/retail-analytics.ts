@@ -96,23 +96,19 @@ export const getInventoryStatus = tool({
       i.current_stock <= i.reorder_point
     );
 
-    return `Inventory Status Report:
-
-📦 CURRENT INVENTORY (${inventory.length} products):
-${inventory.map(i => 
-  `• ${i.product} (${i.category}): ${i.current_stock} units in stock
-    Reorder point: ${i.reorder_point} | Cost: $${i.cost} each | Value: $${(i.current_stock * i.cost).toFixed(2)}`
-).join('\n')}
-
-⚠️ LOW STOCK ALERTS (${lowStockItems.length} items):
-${lowStockItems.length > 0 ? 
-  lowStockItems.map(i => `• ${i.product}: ${i.current_stock} units (reorder at ${i.reorder_point})`).join('\n')
-  : '• No items currently low in stock'}
-
-💰 INVENTORY SUMMARY:
-- Total Products: ${inventory.length}
-- Total Inventory Value: $${totalValue.toFixed(2)}
-- Items Needing Restock: ${lowStockItems.length}`;
+    return {
+      inventory,
+      summary: {
+        totalProducts: inventory.length,
+        totalValue: totalValue.toFixed(2),
+        lowStockCount: lowStockItems.length,
+        lowStockItems: lowStockItems.map((i: any) => ({
+          product: i.product,
+          current: i.current_stock,
+          reorderPoint: i.reorder_point,
+        })),
+      },
+    };
   },
 });
 
